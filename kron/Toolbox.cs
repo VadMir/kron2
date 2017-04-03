@@ -7,12 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WeifenLuo.WinFormsUI.Docking;
 
 namespace kron
 {
-    public partial class Form1 : Form
+    public partial class Toolbox : DockContent
     {
-        public Form1()
+        public Toolbox()
         {
             InitializeComponent();
         }
