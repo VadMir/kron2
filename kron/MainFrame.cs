@@ -19,6 +19,7 @@ namespace kron
         DockPanel dockPanel;
         Editor graph;
         Toolbox tools;
+        Log log;
         public MainFrame()
         {
             InitializeComponent();
@@ -30,10 +31,14 @@ namespace kron
             this.dockPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Controls.Add(this.dockPanel);
 
-         
+
             this.graph = new Editor();
-           // graph.Text = "dddddddddd";
+            graph.Text = "dddddddddd";
             graph.Show(this.dockPanel, DockState.Document);
+
+            this.log = new Log();
+            log.Text = "dddddddddd";
+            log.Show(this.dockPanel, DockState.DockBottomAutoHide);
 
             this.tools = new Toolbox();
             tools.Text = "Типы объектов";

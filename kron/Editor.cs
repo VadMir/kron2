@@ -1,13 +1,6 @@
 ﻿using NLog;
+
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using WeifenLuo.WinFormsUI.Docking;
 
 namespace kron
@@ -22,23 +15,23 @@ namespace kron
 
         private void Editor_Load(object sender, EventArgs e)
         {
-            xmlStore1.DirectoryName = @"C:\Users\Public\Documents\NShape\Demo Projects";
-            xmlStore1.FileExtension = "nspj";
-            project1.Name = "Circles";
-            project1.LibrarySearchPaths.Add(@"C:\Users\Public\Documents\NShape\bin\Debug");
-            project1.AutoLoadLibraries = true;
-            project1.Open();
-            display1.LoadDiagram("Diagram 1");
+            xmlStore2.DirectoryName = @"C:\Users\Public\Documents\NShape\Demo Projects";
+            xmlStore2.FileExtension = "nspj";
+            project2.Name = "Circles";
+            project2.LibrarySearchPaths.Add(@"C:\Users\Public\Documents\NShape\bin\Debug");
+            project2.AutoLoadLibraries = true;
+            project2.Open();
+            display2.LoadDiagram("Diagram 1");
 
-            logger.Trace("Sample trace message");
-            logger.Debug("Sample debug message");
-            logger.Info("Sample informational message");
-
-            int k = 42;
-            int l = 100;
-            logger.Trace("Sample trace message, k={0}, l={1}", k, l);
-            logger.Debug("Sample debug message, k={0}, l={1}", k, l);
-            logger.Info("Sample informational message, k={0}, l={1}", k, l);
+         
+       
+                        logger.Trace("trace log message");
+                        logger.Debug("debug log message");
+                        logger.Info("info log message");
+                        logger.Warn("warn log message");
+                        logger.Error("error log message");
+                        logger.Fatal("fatal log message");
+                        logger.Fatal("fatal log message, rather serious"); ;
         }
     }
 }
