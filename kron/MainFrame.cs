@@ -27,11 +27,13 @@ namespace kron
 
         private void Form1_Load(object sender, EventArgs e)
         {
+
+
+            ///////////////// Dock Pannels 
+
             this.dockPanel = new WeifenLuo.WinFormsUI.Docking.DockPanel();
             this.dockPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Controls.Add(this.dockPanel);
-
-
             this.graph = new Editor();
             graph.Text = "dddddddddd";
             graph.Show(this.dockPanel, DockState.Document);
@@ -43,7 +45,12 @@ namespace kron
             this.tools = new Toolbox();
             tools.Text = "Типы объектов";
             tools.Show(this.dockPanel, DockState.DockLeft);
+///////////////////////////////
 
+//////////////// Start Log Service//////////////////
+//void 
+///////////////////////////////////////////////////
         }
     }
+
 }
