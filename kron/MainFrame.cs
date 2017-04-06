@@ -9,17 +9,23 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WeifenLuo.WinFormsUI.Docking;
+using System.Threading;
+using System.Net.Sockets;
+using System.Net;
 
 namespace kron
 {
 
-    public partial class MainFrame :  Form
+    public partial class MainFrame : Form
     {
-        private static Logger logger = LogManager.GetCurrentClassLogger();
+        public static Logger logger = LogManager.GetCurrentClassLogger();
+        public static bool stopAllThreads = false;
+
         DockPanel dockPanel;
         Editor graph;
         Toolbox tools;
         Log log;
+        UdpClient udplog;
         public MainFrame()
         {
             InitializeComponent();
@@ -45,12 +51,41 @@ namespace kron
             this.tools = new Toolbox();
             tools.Text = "Типы объектов";
             tools.Show(this.dockPanel, DockState.DockLeft);
-///////////////////////////////
+            ///////////////////////////////
 
-//////////////// Start Log Service//////////////////
-//void 
-///////////////////////////////////////////////////
+            //////////////// Start Log Net Service//////////////////
+           // udplog = new UdpClient(4001);
+           // udplog.BeginReceive(new AsyncCallback(logrecvCallback), null);
+            Task.Run(async () =>
+            {
+                using (var udpClient = new UdpClient(4001))
+                {
+                    while (!stopAllThreads)
+                    {
+                        //IPEndPoint object will allow us to read datagrams sent from any source.
+                        var receivedResults = await udpClient.ReceiveAsync();
+                       log.addMessage(Encoding.UTF8.GetString(receivedResults.Buffer));
+                    }
+                    udpClient.Close();
+                }
+            });
+            ///////////////////////////////////////////////////
+            new Thread(new ThreadStart(new Action(() =>
+            {
+                while (!stopAllThreads)
+                {
+                    logger.Log(LogLevel.Debug, "debug mes");
+                    Thread.Sleep(500);
+                    logger.Log(LogLevel.Info, "info mes");
+                    Thread.Sleep(500);
+                }
+            }))).Start();
         }
-    }
 
+        private void MainFrame_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            stopAllThreads = true;
+        }
+      
+    }
 }

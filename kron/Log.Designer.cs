@@ -28,96 +28,112 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.rtbLog = new System.Windows.Forms.RichTextBox();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripComboBox2 = new System.Windows.Forms.ToolStripComboBox();
-            this.toolStripLabel3 = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
-            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripComboBox1 = new System.Windows.Forms.ToolStripComboBox();
-            this.toolStrip1.SuspendLayout();
+            this.ccbLogLevel = new CheckComboBoxTest.CheckedComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.ccbMesSrc = new CheckComboBoxTest.CheckedComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // richTextBox1
+            // rtbLog
             // 
-            this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.richTextBox1.Location = new System.Drawing.Point(0, 0);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.ReadOnly = true;
-            this.richTextBox1.Size = new System.Drawing.Size(739, 158);
-            this.richTextBox1.TabIndex = 0;
-            this.richTextBox1.Text = "";
+            this.rtbLog.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.rtbLog.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rtbLog.Location = new System.Drawing.Point(0, 0);
+            this.rtbLog.Name = "rtbLog";
+            this.rtbLog.ReadOnly = true;
+            this.rtbLog.Size = new System.Drawing.Size(739, 158);
+            this.rtbLog.TabIndex = 0;
+            this.rtbLog.Text = "";
             // 
             // toolStrip1
             // 
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripLabel1,
-            this.toolStripComboBox1,
-            this.toolStripLabel2,
-            this.toolStripComboBox2,
-            this.toolStripLabel3,
-            this.toolStripTextBox1});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(739, 25);
             this.toolStrip1.TabIndex = 1;
             this.toolStrip1.Text = "toolStrip1";
             // 
-            // toolStripLabel2
+            // ccbLogLevel
             // 
-            this.toolStripLabel2.Name = "toolStripLabel2";
-            this.toolStripLabel2.Size = new System.Drawing.Size(90, 22);
-            this.toolStripLabel2.Text = "   Отправитель:";
+            this.ccbLogLevel.CheckOnClick = true;
+            this.ccbLogLevel.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.ccbLogLevel.DropDownHeight = 1;
+            this.ccbLogLevel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ccbLogLevel.FormattingEnabled = true;
+            this.ccbLogLevel.IntegralHeight = false;
+            this.ccbLogLevel.Location = new System.Drawing.Point(70, 1);
+            this.ccbLogLevel.Name = "ccbLogLevel";
+            this.ccbLogLevel.Size = new System.Drawing.Size(176, 21);
+            this.ccbLogLevel.TabIndex = 2;
+            this.ccbLogLevel.ValueSeparator = ", ";
             // 
-            // toolStripComboBox2
+            // label1
             // 
-            this.toolStripComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.toolStripComboBox2.Name = "toolStripComboBox2";
-            this.toolStripComboBox2.Size = new System.Drawing.Size(121, 25);
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(13, 4);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(51, 13);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Уровень";
             // 
-            // toolStripLabel3
+            // label2
             // 
-            this.toolStripLabel3.Name = "toolStripLabel3";
-            this.toolStripLabel3.Size = new System.Drawing.Size(66, 22);
-            this.toolStripLabel3.Text = "   Признак:";
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(253, 4);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(55, 13);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Источник";
             // 
-            // toolStripTextBox1
+            // ccbMesSrc
             // 
-            this.toolStripTextBox1.Name = "toolStripTextBox1";
-            this.toolStripTextBox1.Size = new System.Drawing.Size(120, 25);
+            this.ccbMesSrc.CheckOnClick = true;
+            this.ccbMesSrc.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.ccbMesSrc.DropDownHeight = 1;
+            this.ccbMesSrc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ccbMesSrc.FormattingEnabled = true;
+            this.ccbMesSrc.IntegralHeight = false;
+            this.ccbMesSrc.Location = new System.Drawing.Point(317, 2);
+            this.ccbMesSrc.Name = "ccbMesSrc";
+            this.ccbMesSrc.Size = new System.Drawing.Size(150, 21);
+            this.ccbMesSrc.TabIndex = 5;
+            this.ccbMesSrc.ValueSeparator = ", ";
             // 
-            // toolStripLabel1
+            // label3
             // 
-            this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(56, 22);
-            this.toolStripLabel1.Text = "Уровень:";
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(473, 4);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(51, 13);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Признак";
             // 
-            // toolStripComboBox1
+            // textBox1
             // 
-            this.toolStripComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.toolStripComboBox1.Items.AddRange(new object[] {
-            "Все",
-            "TRACE",
-            "DEBUG",
-            "INFO",
-            "WARNING",
-            "FATAL"});
-            this.toolStripComboBox1.Name = "toolStripComboBox1";
-            this.toolStripComboBox1.Size = new System.Drawing.Size(121, 25);
+            this.textBox1.Location = new System.Drawing.Point(530, 2);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(196, 20);
+            this.textBox1.TabIndex = 7;
             // 
             // Log
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(739, 158);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.ccbMesSrc);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.ccbLogLevel);
             this.Controls.Add(this.toolStrip1);
-            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.rtbLog);
             this.Name = "Log";
             this.Text = "Log";
-            this.toolStrip1.ResumeLayout(false);
-            this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -125,13 +141,13 @@
 
         #endregion
 
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox rtbLog;
         private System.Windows.Forms.ToolStrip toolStrip1;
-        private System.Windows.Forms.ToolStripLabel toolStripLabel2;
-        private System.Windows.Forms.ToolStripComboBox toolStripComboBox2;
-        private System.Windows.Forms.ToolStripLabel toolStripLabel3;
-        private System.Windows.Forms.ToolStripTextBox toolStripTextBox1;
-        private System.Windows.Forms.ToolStripLabel toolStripLabel1;
-        private System.Windows.Forms.ToolStripComboBox toolStripComboBox1;
+        private CheckComboBoxTest.CheckedComboBox ccbLogLevel;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private CheckComboBoxTest.CheckedComboBox ccbMesSrc;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

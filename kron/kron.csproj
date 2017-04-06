@@ -33,6 +33,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CheckComboBox, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Common.CheckComboBox.1.0.0\lib\CheckComboBox.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Dataweb.NShape">
       <HintPath>C:\Program Files (x86)\dataweb\NShape\bin\Dataweb.NShape.dll</HintPath>
     </Reference>
@@ -144,6 +148,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\kron_dev\kron_dev.csproj">
+      <Project>{23e61bec-5b7c-4062-b801-e1810d8d6b12}</Project>
+      <Name>kron_dev</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
