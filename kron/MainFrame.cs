@@ -25,7 +25,7 @@ namespace kron
         Editor graph;
         Toolbox tools;
         Log log;
-        UdpClient udplog;
+       
         public MainFrame()
         {
             InitializeComponent();
@@ -56,19 +56,7 @@ namespace kron
             //////////////// Start Log Net Service//////////////////
            // udplog = new UdpClient(4001);
            // udplog.BeginReceive(new AsyncCallback(logrecvCallback), null);
-            Task.Run(async () =>
-            {
-                using (var udpClient = new UdpClient(4001))
-                {
-                    while (!stopAllThreads)
-                    {
-                        //IPEndPoint object will allow us to read datagrams sent from any source.
-                        var receivedResults = await udpClient.ReceiveAsync();
-                       log.addMessage(Encoding.UTF8.GetString(receivedResults.Buffer));
-                    }
-                    udpClient.Close();
-                }
-            });
+           
             ///////////////////////////////////////////////////
             new Thread(new ThreadStart(new Action(() =>
             {
