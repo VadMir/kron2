@@ -68,6 +68,7 @@ namespace Log
                 
                 rtbLog.SelectionFont = new Font(rtbLog.Font, FontStyle.Bold);
                 
+                           
             })) ;
             
 
