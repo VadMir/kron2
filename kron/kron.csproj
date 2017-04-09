@@ -88,12 +88,6 @@
     <Compile Include="Editor.Designer.cs">
       <DependentUpon>Editor.cs</DependentUpon>
     </Compile>
-    <Compile Include="Log.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Log.Designer.cs">
-      <DependentUpon>Log.cs</DependentUpon>
-    </Compile>
     <Compile Include="MainFrame.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,9 +104,6 @@
     </Compile>
     <EmbeddedResource Include="Editor.resx">
       <DependentUpon>Editor.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Log.resx">
-      <DependentUpon>Log.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainFrame.resx">
       <DependentUpon>MainFrame.cs</DependentUpon>
@@ -153,6 +144,10 @@
     <ProjectReference Include="..\kron_dev\kron_dev.csproj">
       <Project>{23e61bec-5b7c-4062-b801-e1810d8d6b12}</Project>
       <Name>kron_dev</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Log\Log.csproj">
+      <Project>{5cbcc969-2320-4684-8b41-52a864ba7ea1}</Project>
+      <Name>Log</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

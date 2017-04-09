@@ -24,7 +24,7 @@ namespace kron
         DockPanel dockPanel;
         Editor graph;
         Toolbox tools;
-        Log log;
+        Log.Log log;
        
         public MainFrame()
         {
@@ -44,27 +44,30 @@ namespace kron
             graph.Text = "dddddddddd";
             graph.Show(this.dockPanel, DockState.Document);
 
-            this.log = new Log();
+            this.log = new Log.Log();
             log.Text = "dddddddddd";
-            log.Show(this.dockPanel, DockState.DockBottomAutoHide);
+            log.Show(this.dockPanel, DockState.DockBottom);
+            if (log.init()) { }
+            //logger.Info("Модуль логгера инициализирован");
+            //else   logger.Error("Ошибка инициализации модуля логгера");
 
             this.tools = new Toolbox();
             tools.Text = "Типы объектов";
             tools.Show(this.dockPanel, DockState.DockLeft);
             ///////////////////////////////
 
-            //////////////// Start Log Net Service//////////////////
-           // udplog = new UdpClient(4001);
-           // udplog.BeginReceive(new AsyncCallback(logrecvCallback), null);
            
-            ///////////////////////////////////////////////////
             new Thread(new ThreadStart(new Action(() =>
             {
                 while (!stopAllThreads)
                 {
                     logger.Log(LogLevel.Debug, "debug mes");
+                    logger.Log(LogLevel.Trace, "debug mes");
                     Thread.Sleep(500);
                     logger.Log(LogLevel.Info, "info mes");
+                    logger.Log(LogLevel.Warn, "info mes");
+                    logger.Log(LogLevel.Error, "info mes");
+                    logger.Log(LogLevel.Fatal, "info mes");
                     Thread.Sleep(500);
                 }
             }))).Start();
@@ -73,6 +76,7 @@ namespace kron
         private void MainFrame_FormClosing(object sender, FormClosingEventArgs e)
         {
             stopAllThreads = true;
+            log.stop();
         }
       
     }

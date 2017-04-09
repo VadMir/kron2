@@ -1,4 +1,4 @@
-﻿namespace kron
+﻿namespace Log
 {
     partial class Log
     {
@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Log));
-            this.rtbLog = new System.Windows.Forms.RichTextBox();
             this.kuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.uikToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
@@ -47,22 +46,12 @@
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
+            this.rtbLog = new System.Windows.Forms.RichTextBox();
             this.toolStripContainer1.ContentPanel.SuspendLayout();
             this.toolStripContainer1.TopToolStripPanel.SuspendLayout();
             this.toolStripContainer1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // rtbLog
-            // 
-            this.rtbLog.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.rtbLog.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rtbLog.Location = new System.Drawing.Point(0, 0);
-            this.rtbLog.Name = "rtbLog";
-            this.rtbLog.ReadOnly = true;
-            this.rtbLog.Size = new System.Drawing.Size(739, 231);
-            this.rtbLog.TabIndex = 0;
-            this.rtbLog.Text = "";
             // 
             // kuToolStripMenuItem
             // 
@@ -126,7 +115,7 @@
             this.toolStrip1.Location = new System.Drawing.Point(3, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.toolStrip1.Size = new System.Drawing.Size(464, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(514, 25);
             this.toolStrip1.TabIndex = 0;
             // 
             // tbTrace
@@ -226,6 +215,7 @@
             this.toolStripButton7.Name = "toolStripButton7";
             this.toolStripButton7.Size = new System.Drawing.Size(65, 22);
             this.toolStripButton7.Text = "Источник";
+            this.toolStripButton7.Click += new System.EventHandler(this.choose_src);
             // 
             // toolStripSeparator2
             // 
@@ -241,7 +231,20 @@
             // toolStripTextBox1
             // 
             this.toolStripTextBox1.Name = "toolStripTextBox1";
-            this.toolStripTextBox1.Size = new System.Drawing.Size(150, 25);
+            this.toolStripTextBox1.Size = new System.Drawing.Size(200, 25);
+            // 
+            // rtbLog
+            // 
+            this.rtbLog.AcceptsTab = true;
+            this.rtbLog.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.rtbLog.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rtbLog.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.rtbLog.Location = new System.Drawing.Point(0, 0);
+            this.rtbLog.Name = "rtbLog";
+            this.rtbLog.ReadOnly = true;
+            this.rtbLog.Size = new System.Drawing.Size(739, 231);
+            this.rtbLog.TabIndex = 0;
+            this.rtbLog.Text = "";
             // 
             // Log
             // 
@@ -263,8 +266,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.RichTextBox rtbLog;
         private System.Windows.Forms.ToolStripMenuItem kuToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem uikToolStripMenuItem;
         private System.Windows.Forms.ImageList imageList1;
@@ -281,5 +282,6 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
         private System.Windows.Forms.ToolStripTextBox toolStripTextBox1;
+        private System.Windows.Forms.RichTextBox rtbLog;
     }
 }
