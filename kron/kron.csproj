@@ -40,26 +40,9 @@
     <Reference Include="Dataweb.NShape">
       <HintPath>C:\Program Files (x86)\dataweb\NShape\bin\Dataweb.NShape.dll</HintPath>
     </Reference>
-    <Reference Include="Dataweb.NShape.ElectricalModelObjects">
-      <HintPath>..\packages\nshape\Dataweb.NShape.ElectricalModelObjects.dll</HintPath>
-    </Reference>
-    <Reference Include="Dataweb.NShape.ElectricalShapes">
-      <HintPath>..\packages\nshape\Dataweb.NShape.ElectricalShapes.dll</HintPath>
-    </Reference>
-    <Reference Include="Dataweb.NShape.FlowChartShapes">
-      <HintPath>..\packages\nshape\Dataweb.NShape.FlowChartShapes.dll</HintPath>
-    </Reference>
-    <Reference Include="Dataweb.NShape.GeneralModelObjects">
-      <HintPath>..\packages\nshape\Dataweb.NShape.GeneralModelObjects.dll</HintPath>
-    </Reference>
-    <Reference Include="Dataweb.NShape.GeneralShapes">
-      <HintPath>..\packages\nshape\Dataweb.NShape.GeneralShapes.dll</HintPath>
-    </Reference>
-    <Reference Include="Dataweb.NShape.SoftwareArchitectureShapes">
-      <HintPath>..\packages\nshape\Dataweb.NShape.SoftwareArchitectureShapes.dll</HintPath>
-    </Reference>
-    <Reference Include="Dataweb.NShape.WinFormsUI">
-      <HintPath>..\packages\nshape\Dataweb.NShape.WinFormsUI.dll</HintPath>
+    <Reference Include="Dataweb.NShape.WinFormsUI, Version=2.2.1.0, Culture=neutral, PublicKeyToken=1512080cd664963c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Dataweb.NShape.WinFormsUI.dll</HintPath>
     </Reference>
     <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
       <HintPath>..\packages\NLog.4.4.5\lib\net45\NLog.dll</HintPath>
