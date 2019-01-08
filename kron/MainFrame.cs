@@ -65,7 +65,7 @@ namespace kron
                     logger.Log(LogLevel.Trace, "debug mes");
                     Thread.Sleep(500);
                     logger.Log(LogLevel.Info, "info mes");
-                    logger.Log(LogLevel.Warn, "info mes");
+                    logger.Log(LogLevel.Warn, "inhhhfo mes");
                     logger.Log(LogLevel.Error, "info mes");
                     logger.Log(LogLevel.Fatal, "info mes");
                     Thread.Sleep(500);
